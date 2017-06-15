@@ -22,8 +22,8 @@ spring:
     driver-class-name: org.h2.Driver
 
 token:
-  expiration: 300000
-  secret: ttt
+  expiration: 600000
+  secret: przodownikR1
 server:
   port: 8081
   session:
