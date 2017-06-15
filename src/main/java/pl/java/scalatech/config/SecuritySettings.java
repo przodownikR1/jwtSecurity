@@ -1,5 +1,7 @@
 package pl.java.scalatech.config;
 
+import javax.validation.constraints.NotNull;
+
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -19,4 +21,7 @@ class SecuritySettings {
     private int concurrentSessionNumber;
 
     private boolean maxSessionPreventLogin;
+    
+    @NotNull
+    private String defaultRole;
 }

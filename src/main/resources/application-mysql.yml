@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active:
+    - dev
+  jpa:
+    database-platform: mysql 
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: false
+  datasource:
+    jmx-enabled: true
+    url: jdbc:mysql://localhost:3306/jwt?characterEncoding=UTF-8
+    username: jwt
+    password: jwt
+    driver-class-name: com.mysql.jdbc.Driver

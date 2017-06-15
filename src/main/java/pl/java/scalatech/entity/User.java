@@ -8,6 +8,7 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -36,9 +37,11 @@ public class User extends AbstactId {
 
     @JsonIgnore
     private String password;
+    
+    
     private boolean enabled = true;
 
     @ManyToMany(fetch = FetchType.EAGER,cascade={CascadeType.MERGE,CascadeType.PERSIST})
-    @JoinTable(name = "USER_ROLE", joinColumns = { @JoinColumn(name = "userId") }, inverseJoinColumns = { @JoinColumn(name = "roleId") })
+    @JoinTable(uniqueConstraints=@UniqueConstraint(columnNames = { "userId", "roleId" }),name = "USER_ROLE", joinColumns = { @JoinColumn(name = "userId") }, inverseJoinColumns = { @JoinColumn(name = "roleId") })
     private List<Role> roles;
 }
