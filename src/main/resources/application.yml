@@ -4,6 +4,10 @@ spring:
     - mysql
   session:
     store-type: jdbc
+  jpa:
+    hibernate:
+      naming:
+        strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 token:
   expiration: 600000
   secret: przodownikR1
@@ -18,3 +22,7 @@ customSecurity:
   auth-base-url: '/auth/**'
   default-role: user
 cors-origins: '*'
+
+liquibase:
+  change-log: classpath:/db/changelog/db.changelog-master.xml
+  enabled: false

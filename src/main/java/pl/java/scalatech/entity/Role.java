@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="roles")
+@Table(name="ROLES")
 public class Role extends AbstactId {
 
     private static final long serialVersionUID = -804077594557972107L;
