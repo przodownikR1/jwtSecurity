@@ -1,6 +1,7 @@
 package pl.java.scalatech.entity;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,6 +15,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name="roles")
 public class Role extends AbstactId {
 
     private static final long serialVersionUID = -804077594557972107L;

@@ -8,8 +8,8 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL5Dialect
     hibernate:
-      ddl-auto: update
-    generate-ddl: true
+      ddl-auto: none
+    generate-ddl: false
     show-sql: false
   datasource:
     jmx-enabled: true

@@ -34,7 +34,10 @@ dependencies {
     compile group: 'io.jsonwebtoken', name: 'jjwt', version: '0.7.0'
 	compile('org.springframework.boot:spring-boot-configuration-processor')
 	runtime('org.springframework.boot:spring-boot-devtools')
-    runtime group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+    runtime group: 'mysql', name: 'mysql-connector-java', version: '5.1.42'
+    // https://mvnrepository.com/artifact/org.liquibase/liquibase-core
+    compile group: 'org.liquibase', name: 'liquibase-core', version: '3.5.3'
+    
 
 	runtime('com.h2database:h2')
 	compile('org.projectlombok:lombok')
