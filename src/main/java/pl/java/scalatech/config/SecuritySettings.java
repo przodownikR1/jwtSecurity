@@ -2,14 +2,14 @@ package pl.java.scalatech.config;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 
 import lombok.Getter;
 import lombok.Setter;
+import pl.java.scalatech.annotation.SecurityComponent;
 
 @Getter
 @Setter
-@Component
+@SecurityComponent
 @ConfigurationProperties(prefix = "customSecurity")
 class SecuritySettings {
 

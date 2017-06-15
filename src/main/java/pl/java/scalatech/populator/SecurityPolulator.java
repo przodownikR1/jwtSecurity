@@ -5,14 +5,14 @@ import java.util.List;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Component;
 
 import lombok.RequiredArgsConstructor;
+import pl.java.scalatech.annotation.SecurityComponent;
 import pl.java.scalatech.entity.Role;
 import pl.java.scalatech.entity.User;
 import pl.java.scalatech.repository.UserRepository;
 
-@Component
+@SecurityComponent
 @RequiredArgsConstructor
 public class SecurityPolulator implements CommandLineRunner {
     

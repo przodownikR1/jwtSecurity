@@ -1,4 +1,4 @@
-package pl.java.scalatech.config;
+    package pl.java.scalatech.config;
 
 import static io.jsonwebtoken.SignatureAlgorithm.HS256;
 import static java.nio.charset.Charset.forName;
@@ -11,7 +11,6 @@ import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.stereotype.Component;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -19,9 +18,10 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import pl.java.scalatech.annotation.SecurityComponent;
 import pl.java.scalatech.security.UserSec;
 
-@Component
+@SecurityComponent
 @Slf4j
 @RequiredArgsConstructor
 public class TokenUtils {

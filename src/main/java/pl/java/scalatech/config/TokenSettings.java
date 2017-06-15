@@ -3,13 +3,13 @@ package pl.java.scalatech.config;
 import java.io.Serializable;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import pl.java.scalatech.annotation.SecurityComponent;
 
-@Component
+@SecurityComponent
 @ConfigurationProperties(prefix = "token")
 @Getter
 @Setter
